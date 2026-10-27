@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "pvpplus",
+  "version": "${version}",
+  "name": "PvP Plus",
+  "description": "PvP interface: menu with toggles, small HUD windows (effects, FPS/ping, target, armor), waypoints, hearts, shulker from inventory.",
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["dev.pvpplus.PvpPlus"],
+    "client": ["dev.pvpplus.client.PvpPlusClient"]
+  },
+  "mixins": [
+    { "config": "pvpplus.mixins.json", "environment": "client" }
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
